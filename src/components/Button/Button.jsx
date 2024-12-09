@@ -1,9 +1,8 @@
 import "./Button.css";
-export default function Button({ children, buttonClick }) {
+export default function Button({ children, buttonClick, isActive }) {
   return (
     <button
-      className="button active{
-"
+      className={isActive ? "button active" : "button"}
       onClick={buttonClick}
     >
       {children}
